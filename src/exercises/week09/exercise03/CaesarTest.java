@@ -1,4 +1,4 @@
-package weekNine.exercise03;
+package exercises.week09.exercise03;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

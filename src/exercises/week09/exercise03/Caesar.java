@@ -1,4 +1,4 @@
-package weekNine.exercise03;
+package exercises.week09.exercise03;
 
 import java.util.stream.Collectors;
 import java.util.stream.Stream;

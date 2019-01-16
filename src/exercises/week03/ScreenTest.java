@@ -1,6 +1,7 @@
-package excercise19Nov.excercise1;
+package week03.excercise1;
 
 import org.junit.jupiter.api.Test;
+import exercises.week03.excercise1.Customer;
 
 import static org.junit.jupiter.api.Assertions.*;
 
