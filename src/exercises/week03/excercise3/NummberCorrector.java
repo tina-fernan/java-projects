@@ -1,4 +1,4 @@
-package excercise19Nov.excercise1.excercise3;
+package exercises.week03.excercise3;
 
 public class NummberCorrector {
 

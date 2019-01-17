@@ -1,4 +1,4 @@
-package cesar;
+package exercises.cesar;
 
 
 import java.util.ArrayList;

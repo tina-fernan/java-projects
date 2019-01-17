@@ -1,4 +1,4 @@
-package cesar;
+package exercises.cesar;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

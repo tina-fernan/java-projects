@@ -1,4 +1,4 @@
-package excercise19Nov.excercise1.excercise07;
+package exercises.week03.excercise07;
 
 import java.math.BigInteger;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package exercises.week03.excercise1;
+package exercises.week03;
 
 public class Customer {
 

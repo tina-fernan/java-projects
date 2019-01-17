@@ -1,4 +1,4 @@
-package cesar;
+package exercises.cesar;
 
 public class CaesarApplication {
     public static void main(String[] args) {

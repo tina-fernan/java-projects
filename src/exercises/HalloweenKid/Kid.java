@@ -1,4 +1,5 @@
-package example.Clothes.HalloweenKid;
+package exercises.HalloweenKid;
+
 
 
 public class Kid {

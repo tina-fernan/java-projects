@@ -1,5 +1,7 @@
-package example.Clothes;
+package exercises.Clothes;
 
+
+import exercises.Clothes.Cloth;
 
 public class Person {
 

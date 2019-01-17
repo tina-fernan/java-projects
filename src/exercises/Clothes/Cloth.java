@@ -1,4 +1,4 @@
-package example.Clothes;
+package exercises.Clothes;
 
 public class Cloth {
 

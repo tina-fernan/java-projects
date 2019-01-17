@@ -1,4 +1,4 @@
-package excercise26Nov.excercise01;
+package exercises.week04;
 
 public class Topic {
     String name;

@@ -1,14 +1,8 @@
-package excercise26Nov.excercise01.excercise10;
+package exercises.week04.excercise10;
 
-import excercise26Nov.excercise01.Topic;
-import excercise26Nov.excercise01.excercise09.FileReader;
+import exercises.week04.Topic;
+import exercises.week04.excercise09.FileReader;
 
-import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;

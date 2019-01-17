@@ -1,4 +1,4 @@
-package excercise26Nov.excercise01.excercise12;
+package exercises.week04.excercise12;
 
 public class CharectorClass {
 

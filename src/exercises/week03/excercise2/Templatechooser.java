@@ -1,8 +1,7 @@
-package excercise19Nov.excercise1.excercise2;
+package exercises.week03.excercise2;
 
-import excercise19Nov.excercise1.Customer;
 
-import javax.naming.Name;
+import exercises.week03.Customer;
 
 public class Templatechooser {
 

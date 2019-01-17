@@ -1,5 +1,4 @@
-package example.Clothes.HalloweenKid;
-
+package exercises.HalloweenKid;
 import java.util.ArrayList;
 import java.util.List;
 

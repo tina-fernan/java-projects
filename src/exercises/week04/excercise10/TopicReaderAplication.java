@@ -1,8 +1,7 @@
-package excercise26Nov.excercise01.excercise10;
+package exercises.week04.excercise10;
 
-import excercise26Nov.excercise01.Topic;
+import exercises.week04.Topic;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;

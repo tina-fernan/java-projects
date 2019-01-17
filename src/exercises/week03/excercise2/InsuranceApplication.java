@@ -1,6 +1,7 @@
-package excercise19Nov.excercise1.excercise2;
+package exercises.week03.excercise2;
 
-import excercise19Nov.excercise1.Customer;
+
+import exercises.week03.Customer;
 
 public class InsuranceApplication {
 

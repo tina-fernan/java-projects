@@ -1,8 +1,7 @@
-package excercise26Nov.excercise01.excercise11;
+package exercises.week04.excercise11;
 
-import excercise26Nov.excercise01.excercise09.FileReader;
+import exercises.week04.excercise09.FileReader;
 
-import javax.sound.sampled.Line;
 import java.util.*;
 
 public class HappinesApplication {

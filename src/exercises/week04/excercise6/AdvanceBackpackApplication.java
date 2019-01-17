@@ -1,4 +1,4 @@
-package excercise26Nov.excercise01.excercise6;
+package exercises.week04.excercise6;
 
 import java.util.HashSet;
 import java.util.Set;

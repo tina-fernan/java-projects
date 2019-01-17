@@ -1,6 +1,4 @@
-package excercise26Nov.excercise01.excercise6;
-
-import java.util.Objects;
+package exercises.week04.excercise6;
 
 public class Item {
 
