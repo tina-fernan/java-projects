@@ -1,4 +1,4 @@
-package excercise01.examWeekSix14Dec;
+package reflection.examWeek06;
 
 import java.util.Arrays;
 import java.util.List;
