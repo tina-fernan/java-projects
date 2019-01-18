@@ -9,7 +9,7 @@ public class performanceServuy {
 
     private FileReader fileReader=new FileReader();
 
-    public List<Performances> getPerformances(String filePath) {
+    public List<Performances> getPerformances() {
 
         return fileReader.asStream("reflection/week09/students-performance.csv")
                 .skip(1)
