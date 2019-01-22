@@ -1,4 +1,6 @@
-package weekSeven.exercise01.exercise06;
+package exercises.week7.weekSeven.exercise01.exercise06;
+
+import exercises.week7.weekSeven.exercise01.exercise06.SecretHandshake;
 
 import java.util.ArrayList;
 import java.util.List;

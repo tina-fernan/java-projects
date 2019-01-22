@@ -1,4 +1,4 @@
-package weekSeven.exercise01.exercise05;
+package exercises.week7.weekSeven.exercise01.exercise05;
 
 public class Palindrom {
 

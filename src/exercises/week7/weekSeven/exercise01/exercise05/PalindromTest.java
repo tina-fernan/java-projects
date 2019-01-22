@@ -1,5 +1,6 @@
-package weekSeven.exercise01.exercise05;
+package exercises.week7.weekSeven.exercise01.exercise05;
 
+import exercises.week7.weekSeven.exercise01.exercise05.Palindrom;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

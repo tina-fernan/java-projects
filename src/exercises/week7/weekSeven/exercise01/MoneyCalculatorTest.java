@@ -1,5 +1,6 @@
-package weekSeven.exercise01;
+package exercises.week7.weekSeven.exercise01;
 
+import exercises.week7.weekSeven.exercise01.MoneyCalculator;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
