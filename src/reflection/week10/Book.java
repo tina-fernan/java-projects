@@ -5,6 +5,7 @@ import exercises.week10.exercise03.FileReader;
 
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Book {
     //How many words are in the book?
@@ -15,7 +16,7 @@ public class Book {
     //How many times does the name Alice appear?
     private FileReader reader=new FileReader();
 
-    public List<Alice> getBook(){
+    public List<String> getBook(){
         return reader.asStream("reflection/week10/alice.txt")
                 .map(e->e.toLowerCase())
                 .map(e->e.replaceAll(",",""))
@@ -27,15 +28,15 @@ public class Book {
                 .map(e->e.replaceAll("#",""))
                 .map(e->e.replaceAll("/",""))
                 .map(e->e.replaceAll("-",""))
-                .map(e->e.replaceAll(".",""))
                 .map(e->e.replaceAll("\\.",""))
                 .map(e->e.replaceAll("\\*",""))
                 .map(e->e.replaceAll("\\(",""))
                 .map(e->e.replaceAll("\\)",""))
                 .map(e->e.replaceAll("\\[",""))
                 .map(e->e.replaceAll("\\]",""))
-                .map(e->e.split(":"))
-                .map(e->new Alice(e[0]))
+                .map(e->e.split(" "))
+                .flatMap(Stream::of)
+                .filter(e -> !e.isEmpty())
                 .collect(Collectors.toList());
 
     }
