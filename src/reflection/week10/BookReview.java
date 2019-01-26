@@ -32,7 +32,7 @@ public class BookReview {
                 .map(Map.Entry::getValue)
                 .flatMap(List::stream)
                 .collect(Collectors.toList());
-        System.out.println( "the longest word : " +collect);
+        System.out.println( "the longest word : " + collect);
 
     }
     public void getMostAppearingWords(){
@@ -67,6 +67,6 @@ public class BookReview {
         long count = books.stream()
                 .filter(e -> e.equalsIgnoreCase("Alice"))
                 .count();
-        System.out.println( " the number of Alice name is :" +count);
+        System.out.println("the number of Alice" +count);
     }
 }

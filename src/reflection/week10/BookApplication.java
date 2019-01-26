@@ -7,6 +7,7 @@ public class BookApplication {
     public static void main(String[] args) {
         BookReview bookReview = new BookReview();
         bookReview.getNumberOfWords();
+        bookReview.getGroupsOfLongestWords();
         bookReview.getMostAppearingWords();
         bookReview.getDistinctWords();
         bookReview.getMostAppearingletters();
