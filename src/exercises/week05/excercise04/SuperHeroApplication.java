@@ -6,7 +6,7 @@ public class SuperHeroApplication {
     // Use a lop for this, please.
     //Display the superheroe names one by one with a loop by also showing the number of appearance.
     //Display the number of superheroes by using the list’s size.
-    //Create the SuperheroCallerTest class to test the call method.
+    //Create the SuperheroCallerTest class to TestLocalDateTime the call method.
     // Make sure it never returns null and that the superhero names are either Batman, Superman or Spiderman.
 
     public static void main(String[] args) {

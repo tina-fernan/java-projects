@@ -5,7 +5,7 @@ public class Message {
     //Which one is the most used word in ham?
     //Which one is the most used letter in ham?
     //How long is the longest spam message?
-    //Ask two additional questions yourself and test the answers.
+    //Ask two additional questions yourself and TestLocalDateTime the answers.
     //Reminder:
     private String versionOne;
     private String versionTwo;

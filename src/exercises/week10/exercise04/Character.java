@@ -10,6 +10,8 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import static java.util.stream.Collectors.*;
+
 public class Character {
 
     private List<Characters> characters =new CharacterReader().getCharectors();
@@ -23,43 +25,50 @@ public class Character {
 
     }
     public Long getNumberDied(){
-        return  characters.stream()
+        long count = characters.stream()
                 .filter(e -> !e.getDeathYear().isEmpty())
                 .count();
-        //System.out.println(numberDied);
-
+        System.out.println("the number of dead people: " +count);
+        return count;
     }
 
     public String getPercentageMenWomenDiedBooks(){
-        return characters.stream()
+        String women = characters.stream()
                 .filter(e -> !e.getDeathYear().isEmpty())
-                .map(e->e.getGender())
-                .collect(Collectors.groupingBy(e -> e, Collectors.counting()))
+                .map(e -> e.getGender())
+                .collect(groupingBy(e -> e, counting()))
                 .entrySet().stream()
-                .map(e->e.getKey().replace("0","women").replace("1","Man" +
-                        "")+" "+ (e.getValue()*100)/getNumberDied()+" % ")
-                .collect(Collectors.joining());
+                .map(e -> e.getKey().replace("0", "women").replace("1", "Man" +
+                        "") + " " + (e.getValue() * 100) / getNumberDied() + " % ")
+                .collect(joining());
+        System.out.println(women);
+        return women;
 
     }
 
-    public void getBookBiggestDeathCount(){
+    public String getBookBiggestDeathCount(){
         Optional<Map.Entry<String, Long>> first = characters.stream()
                 .filter(e -> !e.getDeathYear().isEmpty())
-                .collect(Collectors.groupingBy(e -> e.getBookDeath(), Collectors.counting()))
+                .collect(groupingBy(e -> e.getBookDeath(), counting()))
                 .entrySet().stream()
                 .sorted((e1, e2) -> e2.getValue().compareTo(e1.getValue()))
                 .findFirst();
         System.out.println(first.get());
-
-
+        return first.get().getKey();
     }
-    public void getDiedNameInBook(){
-        long count = characters.stream()
 
-                .filter(e -> !e.getBookDeath().isEmpty())
-                .map(e -> e.getBookDeath())
-                .count();
-        System.out.println(count);
+
+    public void getDiedNameInBook(){
+        String biggestDeadBook=getBookBiggestDeathCount();
+        List<String> collect = characters.stream()
+                .filter(e -> e.getBookDeath().equals(biggestDeadBook))
+                .map(e -> e.getName())
+                .collect(toList());
+        System.out.println(collect);
+
+         //.collect(groupingBy(Characters::getBookDeath, mapping(Characters::getName), toList()));
+
+
 
 
     }
@@ -68,12 +77,12 @@ public class Character {
     public void getTwoBiggestAllegianceDead(){
         List<String> collect = characters.stream()
                 .filter(e -> !e.getDeathYear().isEmpty())
-                .collect(Collectors.groupingBy(e -> e.getAllegiances(), Collectors.counting()))
+                .collect(groupingBy(e -> e.getAllegiances(), counting()))
                 .entrySet().stream()
                 .sorted((e1, e2) -> e2.getValue().compareTo(e1.getValue()))
                 .map(e -> e.getKey() + " with number of " + e.getValue()+" have the biggest dead ")
                 .limit(2)
-                .collect(Collectors.toList());
+                .collect(toList());
         System.out.println(collect);
 
     }
@@ -92,7 +101,7 @@ public class Character {
         Optional<String> stark = characters.stream()
                 .filter(e -> !e.getDeathYear().isEmpty())
                 .filter(e -> e.getAllegiances().equals("Stark"))
-                .collect(Collectors.groupingBy(e -> e.getBookDeath(), Collectors.counting()))
+                .collect(groupingBy(e -> e.getBookDeath(), counting()))
                 .entrySet().stream()
                 .sorted((e1, e2) -> e2.getValue().compareTo(e1.getValue()))
                 .map(e -> e.getKey())
@@ -107,7 +116,7 @@ public class Character {
         Optional<String> lannister = characters.stream()
                 .filter(e -> !e.getDeathYear().isEmpty())
                 .filter(e -> e.getAllegiances().equals("Lannister"))
-                .collect(Collectors.groupingBy(e -> e.getBookDeath(), Collectors.counting()))
+                .collect(groupingBy(e -> e.getBookDeath(), counting()))
                 .entrySet().stream()
                 .sorted((e1, e2) -> e2.getValue().compareTo(e1.getValue()))
                 .map(e -> e.getKey())
@@ -146,7 +155,7 @@ public class Character {
     public void getKilledCharecterChapter(){
 
         boolean anyKilled = characters.stream()
-
+                .filter(e->!e.getDeathYear().isEmpty())
                 .anyMatch(e -> e.getBookIntroChapter()== e.getBookDeath());
 
         if (anyKilled){

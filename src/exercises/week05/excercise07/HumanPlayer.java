@@ -49,7 +49,7 @@ public class HumanPlayer implements Player {
     //  A decision maker compares both moves and returns the result a message.
     // Both players answer if they want to play again.
     //The game repeats itself until either player chooses not to continue playing.
-    // Make sure all combinations work by creating a test that covers them.
+    // Make sure all combinations work by creating a TestLocalDateTime that covers them.
 
 
 }
